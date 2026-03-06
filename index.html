@@ -141,7 +141,7 @@
   <div class="stats">
     <div class="stat"><div class="snum r" id="s-active">–</div><div class="slabel">Contrôles actifs</div></div>
     <div class="stat"><div class="snum" id="s-today">–</div><div class="slabel">Aujourd'hui</div></div>
-    <div class="stat"><div class="snum" style="font-size:18px;padding-top:4px">107€</div><div class="slabel">Amende 1ère fois</div></div>
+
   </div>
 
   <div class="infobar">⏱️ Les signalements expirent automatiquement après <strong>2 heures</strong></div>
@@ -217,7 +217,7 @@
 
 <div class="toast" id="toast"></div>
 
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.39.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
 const SURL = 'https://ltswohnqnhejerkkwdkr.supabase.co';
 const SKEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imx0c3dvaG5xbmhlamVya2t3ZGtyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzI3Mzc5NjcsImV4cCI6MjA4ODMxMzk2N30.Zf9y1HDDJ3Mh475ku-wu9ouIKQsQQqG3n_MZzm63vT0';
@@ -428,8 +428,10 @@ function renderAlerts(){
       <div class="abot">
         <div class="atime">🕐 ${ago(age)}</div>
         <div class="ebar-wrap"><div class="ebar ${bc}" style="width:${pct.toFixed(1)}%"></div></div>
-        <button class="abtn${voted?' voted':''}" onclick="vote('${a.id}',${a.votes||0},${voted})">👍 ${a.votes||0}</button>
-        <button class="abtn${still?' voted':''}" onclick="confirm_('${a.id}',${a.confirmations||0},${still})">👀 ${a.confirmations||0}</button>
+        <button class="abtn${voted?' voted':''}" onclick="vote('${a.id}',${a.votes||0},${voted})" title="Je confirme ce contrôle">👍 ${a.votes||0}</button>
+        <button class="abtn${still?' voted':''}" onclick="confirm_('${a.id}',${a.confirmations||0},${still})" title="Je vois encore ce contrôle maintenant (3 confirmations = Vérifié ✅)">👀 ${a.confirmations||0}</button>
+      </div>
+      <div style="font-size:10px;color:var(--muted);margin-top:4px">👍 je confirme &nbsp;·&nbsp; 👀 je vois encore (3× = ✅ vérifié)</div>
       </div>
       <div class="srow">
         <a class="sbtn swapp" href="https://wa.me/?text=${enc}" target="_blank" rel="noopener">
