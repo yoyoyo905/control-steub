@@ -167,6 +167,36 @@
 
   <div class="infobar">⏱️ Les signalements expirent automatiquement après <strong>2 heures</strong></div>
 
+  <div class="install-guide">
+    <button class="install-guide-toggle" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">
+      📲 Comment installer l'app sur votre téléphone ?
+      <span class="arrow">▼</span>
+    </button>
+    <div class="install-guide-body">
+      <div class="install-platform">
+        <h4>🍎 iPhone (Safari)</h4>
+        <div class="install-steps">
+          <div class="install-step"><span class="num">1</span><span>Ouvrez ce lien dans <strong>Safari</strong> (pas Chrome)</span></div>
+          <div class="install-step"><span class="num">2</span><span>Appuyez sur le bouton <strong>⬆️ Partager</strong> en bas de l'écran</span></div>
+          <div class="install-step"><span class="num">3</span><span>Faites défiler et tapez <strong>« Sur l'écran d'accueil »</strong></span></div>
+          <div class="install-step"><span class="num">4</span><span>Appuyez sur <strong>« Ajouter »</strong> ✅</span></div>
+        </div>
+      </div>
+      <div class="install-divider"></div>
+      <div class="install-platform">
+        <h4>🤖 Android (Chrome)</h4>
+        <div class="install-steps">
+          <div class="install-step"><span class="num">1</span><span>Ouvrez ce lien dans <strong>Chrome</strong></span></div>
+          <div class="install-step"><span class="num">2</span><span>Appuyez sur les <strong>⋮ trois points</strong> en haut à droite</span></div>
+          <div class="install-step"><span class="num">3</span><span>Tapez <strong>« Ajouter à l'écran d'accueil »</strong></span></div>
+          <div class="install-step"><span class="num">4</span><span>Confirmez ✅</span></div>
+        </div>
+      </div>
+      <div class="install-divider"></div>
+      <p style="font-size:12px;color:var(--muted);text-align:center;">Fonctionne comme une vraie app — sans passer par l'App Store ni le Google Play Store !</p>
+    </div>
+  </div>
+
   <div class="install-banner" id="install-banner" style="display:none">
     <button class="install-close" onclick="closeInstall()">✕</button>
     <h3>📱 Installer l'app sur votre téléphone</h3>
@@ -190,35 +220,6 @@
   <div class="alist" id="alist"><div class="loading"><div class="spin"></div>Chargement...</div></div>
 </main>
 
-<div class="install-guide">
-  <button class="install-guide-toggle" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">
-    📲 Comment installer l'app sur votre téléphone ?
-    <span class="arrow">▼</span>
-  </button>
-  <div class="install-guide-body">
-    <div class="install-platform">
-      <h4>🍎 iPhone (Safari)</h4>
-      <div class="install-steps">
-        <div class="install-step"><span class="num">1</span><span>Ouvrez ce lien dans <strong>Safari</strong> (pas Chrome)</span></div>
-        <div class="install-step"><span class="num">2</span><span>Appuyez sur le bouton <strong>⬆️ Partager</strong> en bas de l'écran</span></div>
-        <div class="install-step"><span class="num">3</span><span>Faites défiler et tapez <strong>« Sur l'écran d'accueil »</strong></span></div>
-        <div class="install-step"><span class="num">4</span><span>Appuyez sur <strong>« Ajouter »</strong> ✅</span></div>
-      </div>
-    </div>
-    <div class="install-divider"></div>
-    <div class="install-platform">
-      <h4>🤖 Android (Chrome)</h4>
-      <div class="install-steps">
-        <div class="install-step"><span class="num">1</span><span>Ouvrez ce lien dans <strong>Chrome</strong></span></div>
-        <div class="install-step"><span class="num">2</span><span>Appuyez sur les <strong>⋮ trois points</strong> en haut à droite</span></div>
-        <div class="install-step"><span class="num">3</span><span>Tapez <strong>« Ajouter à l'écran d'accueil »</strong></span></div>
-        <div class="install-step"><span class="num">4</span><span>Confirmez ✅</span></div>
-      </div>
-    </div>
-    <div class="install-divider"></div>
-    <p style="font-size:12px;color:var(--muted);text-align:center;">Fonctionne comme une vraie app — sans passer par l'App Store ni le Google Play Store !</p>
-  </div>
-</div>
 </div>
 
 <footer>
