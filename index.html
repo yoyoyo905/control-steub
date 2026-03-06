@@ -124,6 +124,19 @@
     .toast.ok{background:var(--g)}
     .toast.err{background:var(--r)}
     footer{text-align:center;padding:14px;font-size:11px;color:var(--muted);border-top:1px solid var(--border);margin-top:16px}
+    .install-guide{margin:16px 0;border:1px solid var(--border);border-radius:14px;overflow:hidden}
+    .install-guide summary{list-style:none;padding:13px 16px;cursor:pointer;display:flex;align-items:center;gap:8px;font-size:13px;font-weight:700;color:var(--b);background:var(--card);user-select:none}
+    .install-guide summary::-webkit-details-marker{display:none}
+    .install-guide summary .arrow{margin-left:auto;transition:transform .25s;font-size:11px;opacity:.6}
+    .install-guide[open] summary .arrow{transform:rotate(180deg)}
+    .install-guide-body{padding:16px;background:var(--card);border-top:1px solid var(--border)}
+    .install-platform{margin-bottom:16px}
+    .install-platform:last-child{margin-bottom:0}
+    .install-platform h4{font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:10px;display:flex;align-items:center;gap:6px}
+    .install-steps{display:flex;flex-direction:column;gap:8px}
+    .install-step{display:flex;align-items:flex-start;gap:10px;font-size:13px;line-height:1.5}
+    .install-step .num{min-width:22px;height:22px;border-radius:50%;background:var(--b);color:#fff;font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center;margin-top:1px}
+    .install-divider{height:1px;background:var(--border);margin:14px 0}
   </style>
 </head>
 <body>
@@ -176,6 +189,36 @@
   <div class="stitle" id="list-title">Contrôles signalés</div>
   <div class="alist" id="alist"><div class="loading"><div class="spin"></div>Chargement...</div></div>
 </main>
+
+<details class="install-guide">
+  <summary>
+    📲 Comment installer l'app sur votre téléphone ?
+    <span class="arrow">▼</span>
+  </summary>
+  <div class="install-guide-body">
+    <div class="install-platform">
+      <h4>🍎 iPhone (Safari)</h4>
+      <div class="install-steps">
+        <div class="install-step"><span class="num">1</span><span>Ouvrez ce lien dans <strong>Safari</strong> (pas Chrome)</span></div>
+        <div class="install-step"><span class="num">2</span><span>Appuyez sur le bouton <strong>⬆️ Partager</strong> en bas de l'écran</span></div>
+        <div class="install-step"><span class="num">3</span><span>Faites défiler et tapez <strong>« Sur l'écran d'accueil »</strong></span></div>
+        <div class="install-step"><span class="num">4</span><span>Appuyez sur <strong>« Ajouter »</strong> ✅</span></div>
+      </div>
+    </div>
+    <div class="install-divider"></div>
+    <div class="install-platform">
+      <h4>🤖 Android (Chrome)</h4>
+      <div class="install-steps">
+        <div class="install-step"><span class="num">1</span><span>Ouvrez ce lien dans <strong>Chrome</strong></span></div>
+        <div class="install-step"><span class="num">2</span><span>Appuyez sur les <strong>⋮ trois points</strong> en haut à droite</span></div>
+        <div class="install-step"><span class="num">3</span><span>Tapez <strong>« Ajouter à l'écran d'accueil »</strong></span></div>
+        <div class="install-step"><span class="num">4</span><span>Confirmez ✅</span></div>
+      </div>
+    </div>
+    <div class="install-divider"></div>
+    <p style="font-size:12px;color:var(--muted);text-align:center;">Fonctionne comme une vraie app — sans passer par l'App Store ni le Google Play Store !</p>
+  </div>
+</details>
 
 <footer>
   Contrôle STIB Alert — Données partagées anonymement par la communauté<br>
